@@ -1,0 +1,31 @@
+/* styles.css */
+p {
+    font-size: 18px;
+    color: green;
+    line-height: 1.5;
+}
+.additional-content {
+    background-color: #cabbe4;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+.additional-content h2 {
+    color: #00796b;
+}
+.additional-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+.additional-content ul li {
+    margin-bottom: 10px;
+}
+.container {
+    background-color: #8a8fa5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body {
+    background-color: #9b87b3; 
+}

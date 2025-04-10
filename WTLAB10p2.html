@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #bulb {
+            width: 100px;
+            height: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the button to turn the bulb on and off</h2>
+    <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Bulb">
+    <br>
+    <button onclick="toggleBulb()">Turn On/Off</button>
+
+    <script>
+        let isOn = false;
+        function toggleBulb() {
+            const bulb = document.getElementById("bulb");
+            isOn = !isOn;
+            bulb.src = isOn ? "https://www.w3schools.com/js/pic_bulbon.gif" : "https://www.w3schools.com/js/pic_bulboff.gif";
+        }
+    </script>
+</body>
+</html>

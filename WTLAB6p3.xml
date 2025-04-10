@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addressbook>
+    <employee>
+        <name>John Doe</name>
+        <address>
+            <street>123 Main Street</street>
+            <city>Springfield</city>
+            <state>IL</state>
+            <zip>62701</zip>
+        </address>
+    </employee>
+    <employee>
+        <name>Jane Smith</name>
+        <address>
+            <street>456 Elm Street</street>
+            <city>Rivertown</city>
+            <state>NY</state>
+            <zip>12121</zip>
+        </address>
+    </employee>
+    <employee>
+        <name>Mike Johnson</name>
+        <address>
+            <street>789 Oak Street</street>
+            <city>Mapleton</city>
+            <state>CA</state>
+            <zip>90210</zip>
+        </address>
+    </employee>
+</addressbook>

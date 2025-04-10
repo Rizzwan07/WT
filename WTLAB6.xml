@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding="UTF-8"
+standalone="yes" ?>
+<addressbook>
+    <empt>
+        <name> Rizwan</name>
+        <doorno>No-2/57</doorno>
+        <street> Vinayakam St</street>
+        <area> Teynampet</area>
+        <city>Chennal-600020</city>
+        <state>Tamil Nadu</state>
+        <country>India</country>
+        <phoneno>909583625</phoneno>
+    </empt>
+</addressbook>
