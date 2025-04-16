@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #clock {
+            font-size: 2em;
+            margin: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+        }
+        #colorBox {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">00:00:00</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+    <div id="colorBox"></div>
+
+    <script>
+        let clockInterval;
+        let seconds = 0;
+
+        // Function to format time as HH:MM:SS
+        function formatTime(sec) {
+            const hrs = Math.floor(sec / 3600).toString().padStart(2, '0');
+            const mins = Math.floor((sec % 3600) / 60).toString().padStart(2, '0');
+            const secs = (sec % 60).toString().padStart(2, '0');
+            return `${hrs}:${mins}:${secs}`;
+        }
+
+        // Function to update the clock display
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.textContent = formatTime(seconds);
+            }
+        }
+
+        // Start button functionality
+        function startClock() {
+            if (!clockInterval) {
+                clockInterval = setInterval(() => {
+                    seconds++;
+                    updateClock();
+                }, 1000);
+            }
+        }
+
+        // Stop button functionality
+        function stopClock() {
+            clearInterval(clockInterval);
+            clockInterval = null;
+        }
+
+        // Reset button functionality
+        function resetClock() {
+            clearInterval(clockInterval);
+            clockInterval = null;
+            seconds = 0;
+            updateClock();
+        }
+
+        // Change color of the square div when clicked
+        function changeColor() {
+            const colorBox = document.getElementById('colorBox');
+            const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+            colorBox.style.backgroundColor = randomColor;
+        }
+
+        // Attach event listeners to buttons and the color box
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('start').addEventListener('click', startClock);
+            document.getElementById('stop').addEventListener('click', stopClock);
+            document.getElementById('reset').addEventListener('click', resetClock);
+            document.getElementById('colorBox').addEventListener('click', changeColor);
+
+            // Initialize the clock display
+            updateClock();
+        });
+    </script>
+</body>
+</html>
+
