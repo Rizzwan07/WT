@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array, Length, Factorial, and Sum</title>
+    <script>
+        // JavaScript code to demonstrate the concepts
+        window.onload = function() {
+            // 1. Array and its length
+            let numbers = [1, 2, 3, 4, 5];
+            document.write("<h2>Array: " + numbers + "</h2>");
+            document.write("<p>Length of the array: " + numbers.length + "</p>");
+
+            // 2. Factorial of a number
+            function factorial(n) {
+                if (n === 0 || n === 1) return 1;
+                return n * factorial(n - 1);
+            }
+            let num = 5;
+            document.write("<p>Factorial of " + num + ": " + factorial(num) + "</p>");
+
+            // 3. Sum of array elements
+            let sum = numbers.reduce((acc, curr) => acc + curr, 0);
+            document.write("<p>Sum of array elements: " + sum + "</p>");
+        };
+    </script>
+</head>
+<body>
+    <h1>Array, Length, Factorial, and Sum</h1>
+</body>
+</html>
